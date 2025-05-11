@@ -3,15 +3,14 @@ package com.pizzatronix.model;
 import jakarta.persistence.*;
 
 @Entity
-public class Customer {
+public class Topping {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private String phone;
-    private String email;
+    private double price;
 
     public Long getId() {
         return id;
@@ -25,19 +24,11 @@ public class Customer {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public double getPrice() {
+        return price;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
